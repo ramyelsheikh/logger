@@ -1,7 +1,7 @@
 {
     "name": "influencers/logger",
     "description": "Package to save the user hits on pages to Mongodb",
-    "type": "project",
+    "type": "library",
     "require": {
         "jenssegers/mongodb": "3.3.1"
     },
