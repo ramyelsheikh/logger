@@ -28,11 +28,16 @@ class ComposerStaticInit9bb76dca5283d9130c9a35318297f473
         ),
     );
 
+    public static $classMap = array (
+        'Influencers\\Logger\\LoggerServiceProvider' => __DIR__ . '/../..' . '/src/LoggerServiceProvider.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit9bb76dca5283d9130c9a35318297f473::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit9bb76dca5283d9130c9a35318297f473::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit9bb76dca5283d9130c9a35318297f473::$classMap;
 
         }, null, ClassLoader::class);
     }
