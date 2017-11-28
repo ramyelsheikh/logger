@@ -6,9 +6,6 @@
     "require": {
         "jenssegers/mongodb": "3.3.1"
     },
-    "require-dev": {
-        "jenssegers/mongodb": "3.3.1"
-    },
     "authors": [
         {
             "name": "Ramy ElSheikh",
