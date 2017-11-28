@@ -6,13 +6,15 @@
     "require": {
         "jenssegers/mongodb": "3.3.1"
     },
+    "require-dev": {
+        "jenssegers/mongodb": "3.3.1"
+    },
     "authors": [
         {
             "name": "Ramy ElSheikh",
             "email": "ramy.elsheikh@gmail.com"
         }
     ],
-    "utils": "stable",
     "autoload": {
         "classmap": [
             "src"
