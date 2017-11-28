@@ -12,7 +12,7 @@
             "email": "ramy.elsheikh@gmail.com"
         }
     ],
-    "utils": "dev-master",
+    "utils": "stable",
     "autoload": {
         "classmap": [
             "src"
