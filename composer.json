@@ -12,8 +12,7 @@
             "email": "ramy.elsheikh@gmail.com"
         }
     ],
-    "prefer-stable": true,
-    "minimum-stability": "dev",
+    "utils": "dev-master",
     "autoload": {
         "classmap": [
             "src"
