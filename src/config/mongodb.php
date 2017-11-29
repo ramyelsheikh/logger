@@ -1,6 +1,8 @@
 <?php
 
 return [
-    'mongodb_host' => env('127.0.0.1'),
-    'mongodb_port' => env('27017'),
+    'mongodb_host' => env('mongodb_host'),
+    'mongodb_port' => env('mongodb_port'),
+    'mongodb_database' => env('mongodb_database'),
+    'mongodb_collection' => env('mongodb_collection')
     ];

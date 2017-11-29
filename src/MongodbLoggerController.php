@@ -10,14 +10,16 @@ class MongodbLogger
     protected $mongodbHost;
     protected $mongodbPort;
 
-    protected $database = 'influencers';
+    protected $database;
 
-    protected $collection = 'logs';
+    protected $collection;
 
     function __construct()
     {
         $this->mongodbHost = env('mongodb_host');
         $this->mongodbPort = env('mongodb_port');
+        $this->database = env('mongodb_database');
+        $this->collection = env('mongodb_collection');
 
         try {
             $mongo = new Mongo('mongodb://' . $this->mongodbHost . ':' . $this->mongodbPort);
