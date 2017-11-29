@@ -25,5 +25,8 @@ class LoggerServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->app->make('Influencers\Logger\LoggerController');
+        $this->app->make('Influencers\Logger\MongodbLogger');
+        $this->loadViewsFrom(__DIR__.'/views', 'logger');
     }
 }
