@@ -15,15 +15,13 @@
         <tr>
             <th scope="col">Time</th>
             <th scope="col">Page</th>
-            <th scope="col">Coming From</th>
         </tr>
         </thead>
         <tbody>
-        @foreach ($logs as $log)
+        @foreach ($logs as $id => $log)
         <tr>
-            <th scope="row">{{ $log->time }}</th>
-            <td>$log->page</td>
-            <td>$log->coming-from</td>
+            <th scope="row">{{$log['time']}}</th>
+            <th scope="row">{{$log['page']}}</th>
         </tr>
         @endforeach
         </tbody>

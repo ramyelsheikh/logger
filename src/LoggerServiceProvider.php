@@ -3,6 +3,7 @@
 namespace Influencers\Logger;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Config;
 
 class LoggerServiceProvider extends ServiceProvider
 {
@@ -15,6 +16,8 @@ class LoggerServiceProvider extends ServiceProvider
     {
         //
         include __DIR__.'/routes.php';
+        $this->publishes([__DIR__.'/config/mongodb.php' => config_path('mongodb.php'),
+        ]);
     }
 
     /**

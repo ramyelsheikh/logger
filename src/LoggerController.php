@@ -14,7 +14,6 @@ class LoggerController extends Controller
         $mongodbLogger->insert([
             'time' => strtotime("now"),
             'page' => $pageRequest,
-            'coming-from' => !empty($request->input('src')) ? $request->input('src') : '',
             ]);
 
         if($path == 'page-404') {
@@ -29,14 +28,18 @@ class LoggerController extends Controller
     }
 
     public function summary(MongodbLogger $mongodbLogger) {
-        $recordsList = $mongodbLogger->index();
+        $recordsList = $mongodbLogger->index([], ['sort' => ['time' => -1]]);
 
         $logs = [];
 
         foreach ($recordsList as $record) {
-            $logs[] = $record->getArrayCopy();
+            $log = $record->getArrayCopy();
+            $logs[] = [
+                'time' => (($log['time']) instanceof \MongoDB\Model\BSONDocument) ? date('M d, Y  H:i:s',$log['time']->getArrayCopy()['time']) : date('M d, Y H:i:s',$log['time']),
+                'page' => (($log['page']) instanceof \MongoDB\Model\BSONDocument) ? $log['page']->getArrayCopy()['page'] : $log['page'],
+            ];
+
         }
-        print_r($logs);exit;
 
         return view('logger::summary', compact('logs'));
     }
