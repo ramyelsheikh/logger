@@ -21,10 +21,10 @@ You will find this package in packagist.org at https://packagist.org/packages/in
 - Influencers\Logger\LoggerServiceProvider::class,
 
 3- Set the configuration of Mongodb Server in .env file of your laravel root dir:
-mongodb_host=<mongodb_host>
-mongodb_port=<mongodb_port>
-mongodb_database=<mongodb_database>
-mongodb_collection=<mongodb_collection>
+- mongodb_host=<mongodb_host>
+- mongodb_port=<mongodb_port>
+- mongodb_database=<mongodb_database>
+- mongodb_collection=<mongodb_collection>
 
 replace the <> with your server values.
 
