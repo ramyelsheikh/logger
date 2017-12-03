@@ -8,7 +8,9 @@ You will find this package in packagist.org at https://packagist.org/packages/in
 
 ### Prerequisites
 
-1- Set Minimum Stability of your core laravel to dev
+1- Set Minimum Stability of your core laravel to dev by:
+- Adding this line to core composer.json file: "minimum-stability": "dev"
+- run command: composer dump-autoload
 2- Install Mongodb client on your server. If it is not installed, the package will refuse to install.
 
 ### Installing
